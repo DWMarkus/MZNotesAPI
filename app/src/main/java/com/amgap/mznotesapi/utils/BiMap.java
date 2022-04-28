@@ -20,7 +20,6 @@ public class BiMap<T, U> {
     public Map<T, U> get() {
         return normal;
     }
-
     public Map<U, T> inverted() {
         return inverted;
     }
