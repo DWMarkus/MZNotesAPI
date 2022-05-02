@@ -8,6 +8,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MZNotesAPI" />
+        android:theme="@style/Theme.MZNotesAPI" >
+
+        <activity
+            android:name=".activities.ChangeLangActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.EditTaskActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.CreateTaskActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>

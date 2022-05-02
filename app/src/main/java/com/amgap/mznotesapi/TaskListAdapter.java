@@ -11,6 +11,11 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amgap.mznotesapi.models.TaskItem;
+import com.amgap.mznotesapi.activities.EditTaskActivity;
+import com.amgap.mznotesapi.activities.MainActivity;
+import com.amgap.mznotesapi.utils.ActivityHelper;
+
+import com.github.antoinejt.exassert.Preconditions;
 
 import java.util.Date;
 import java.util.List;
@@ -67,9 +72,8 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.TaskVi
         return taskList.size();
     }
 
-    // Sonarlint java:S3655 - Optional value should only be accessed after calling isPresent()
-    //    The element must be present, else I want it to crash the app, because some
-    //    bug is present.
+    // Sonarlint java:S3655
+    //    Doit être présent sinon l'application crash au démarrage
     @SuppressWarnings({"java:S3655"})
     class TaskViewHolder extends RecyclerView.ViewHolder {
         public TaskViewHolder(@NonNull View itemView) {

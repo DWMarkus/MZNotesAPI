@@ -6,9 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class DateFormatter {
-    private DateFormatter() {
-        // cache par default
-    }
+    private DateFormatter() {}
 
     private static final String DATE_PATTERN = "dd/MM/yyyy";
 

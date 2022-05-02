@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-// add library exceptions
 import com.github.antoinejt.exassert.Preconditions;
 
 import com.amgap.mznotesapi.models.TaskItem;
@@ -15,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+// Sonarlint java:S110 - Sans ça l'appli crash
+@SuppressWarnings("java:S110")
 public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Database.db";
     private static DatabaseHandler instance;

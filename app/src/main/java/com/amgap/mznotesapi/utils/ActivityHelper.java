@@ -14,9 +14,7 @@ import java.util.Calendar;
 import java.util.Objects;
 
 public class ActivityHelper {
-    private ActivityHelper() {
-        // hidden
-    }
+    private ActivityHelper() { }
 
     public static void changeActivity(AppCompatActivity origin, Class<? extends Activity> dest) {
         Intent i = new Intent(origin, dest);
@@ -52,6 +50,7 @@ public class ActivityHelper {
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH)
         );
+
         datePickerDialog.show();
     }
 }

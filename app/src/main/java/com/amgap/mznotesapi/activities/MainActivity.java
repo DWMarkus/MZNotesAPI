@@ -8,11 +8,11 @@ import android.widget.Switch;
 import androidx.appcompat.widget.Toolbar;
 
 import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+import com.amgap.mznotesapi.R;
 import com.amgap.mznotesapi.utils.ActivityHelper;
 import com.amgap.mznotesapi.TaskListFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.amgap.mznotesapi.utils.Preferences;
-import com.amgap.mznotesapi.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Locale;
 
@@ -35,7 +35,7 @@ public class MainActivity extends LocalizationActivity {
         boolean hideUnfinishedTasks = Preferences.getBoolean(getApplicationContext(),
                 HIDE_TASKS_PREFERENCES, false);
 
-        // set last selected language only at startup
+        // dernier langage choisi au startup
         if (!firstRun) {
             setLanguage(Locale.getDefault());
             TaskListFragment.setHideUnfinishedTasks(hideUnfinishedTasks);
@@ -63,16 +63,12 @@ public class MainActivity extends LocalizationActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         final int id = item.getItemId();
 
         if (id == R.id.action_settings) {
@@ -81,3 +77,5 @@ public class MainActivity extends LocalizationActivity {
 
         return super.onOptionsItemSelected(item);
     }
+}
+
