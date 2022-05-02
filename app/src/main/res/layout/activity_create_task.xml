@@ -46,8 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/fieldTaskEnd"
             android:backgroundTint="@color/colorGreen"
-            android:textColor="@color/colorWhite"
-            android:text="@string/create_button" />
+            android:text="@string/create_button"
+            android:textColor="@color/colorWhite" />
 
     </RelativeLayout>
 </ScrollView>

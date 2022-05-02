@@ -17,11 +17,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,25 +28,13 @@ public class WeatherActivity extends AppCompatActivity {
     EditText etCity, etCountry;
     TextView tvResult;
     private final String url = "https://api.openweathermap.org/data/2.5/weather";
-    private final String appid = "e53301e27efa0b66d05045d91b2742d3";
+    private final String appid = "63f1bb139d339d9aaf604e8866c7a040";
     DecimalFormat df = new DecimalFormat("#.##");
-
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weather);
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-
-        mAdView = findViewById(R.id.adViewMain);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
         etCity = findViewById(R.id.etCity);
         tvResult = findViewById(R.id.tvResult);
     }
@@ -59,15 +42,12 @@ public class WeatherActivity extends AppCompatActivity {
     public void getWeatherDetails(View view) {
         String tempUrl = "";
         String city = etCity.getText().toString().trim();
-        String country = etCountry.getText().toString().trim();
         if (city.equals("")) {
             tvResult.setText("City field can not be empty!");
         } else {
-            if (!country.equals("")) {
-                tempUrl = url + "?q=" + city + "," + country + "&appid=" + appid;
-            } else {
                 tempUrl = url + "?q=" + city + "&appid=" + appid;
             }
+
             StringRequest stringRequest = new StringRequest(Request.Method.POST, tempUrl, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -114,4 +94,3 @@ public class WeatherActivity extends AppCompatActivity {
             requestQueue.add(stringRequest);
         }
     }
-}

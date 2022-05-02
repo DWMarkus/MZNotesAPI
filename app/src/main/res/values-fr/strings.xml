@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name" translatable="false">MZNotesAPI</string>
+
+    <!-- Placeholder strings -->
+    <string name="task_title_placeholder">Titre de la tâche</string>
+    <string name="task_description_placeholder">Description</string>
+
+    <!-- Layout strings -->
+    <string name="action_settings">Options</string>
+    <string name="action_weather">Météo</string>
+    <string name="hintCity_weather">Entrer le nom de la ville</string>
+    <string name="hide_switch">Cacher les tâches terminées</string>
+    <string name="task_list_fragment">Liste de tâches</string>
+    <string name="deadline_field">Date échéance (JJ/MM/AAAA)</string>
+    <string name="description_field">Description</string>
+    <string name="task_name_field">Nom de la tâche</string>
+    <string name="create_button">Créer</string>
+    <string name="is_finished_checkbox">Terminé ?</string>
+    <string name="edit_button">Éditer</string>
+    <string name="delete_button">Supprimer</string>
+    <string name="weather_button">Voir</string>
+
+    <!-- Lang things -->
+    <string name="selected_lang">Langue actuelle : Français</string>
+    <string name="lang_en">Anglais</string>
+    <string name="lang_fr">Français</string>
+    <string name="lang_switch_label">Changer de langue</string>
+
+    <!-- Images content description -->
+    <string name="fab_content_description">Créer une tâche</string>
+    <string name="task_icon_content_description">Icône de liste</string>
+
+    <!-- In-code used strings -->
+    <!-- Create status -->
+    <string name="status_create_ok">Tâche sauvegardée correctement !</string>
+    <string name="status_create_empty_fields">Erreur : Certains champs sont vides !</string>
+    <string name="status_create_date_format">Erreur : Format de la date incorrect !</string>
+    <string name="status_create_error">Erreur durant l\'ajout de la tâche !</string>
+    <!-- Update status -->
+    <string name="status_update_ok">Tâche correctement mise à jour !</string>
+    <string name="status_update_error">Erreur durant la mise à jour de la tâche !</string>
+    <!-- Delete status -->
+    <string name="status_delete_ok">Tâche correctement supprimée !</string>
+    <string name="status_delete_error">Erreur durant la suppression de la tâche !</string>
+    <string name="task_deadline_placeholder">Date échéance</string>
+
+    <string name="status_weather_error">Veuillez sélectionner une ville !</string>
+</resources>

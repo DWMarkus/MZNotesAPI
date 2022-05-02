@@ -43,13 +43,6 @@ public class MainActivity extends LocalizationActivity {
         return instance;
     }
 
-    // API
-    EditText etCity;
-    TextView tvResult;
-    private final String url = "https://api.openweathermap.org/data/2.5/weather?q=";
-    private final String appid = "63f1bb139d339d9aaf604e8866c7a040";
-    DecimalFormat df = new DecimalFormat("#.##");
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +76,6 @@ public class MainActivity extends LocalizationActivity {
             }
         });
 
-
     }
 
     @Override
@@ -98,6 +90,8 @@ public class MainActivity extends LocalizationActivity {
 
         if (id == R.id.action_settings) {
             ActivityHelper.changeActivity(this, ChangeLangActivity.class);
+        } else {
+            ActivityHelper.changeActivity(this, WeatherActivity.class);
         }
 
         return super.onOptionsItemSelected(item);

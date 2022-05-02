@@ -25,7 +25,7 @@ public class ChangeLangActivity extends LocalizationActivity {
         String defaultLangCode = Locale.getDefault().getLanguage();
         if(!langCodes.get().containsValue(defaultLangCode)) {
             // langage par defaut
-            defaultLangCode = "fr";
+            defaultLangCode = "en";
         }
         rg.check(langCodes.inverted().get(defaultLangCode));
     }
