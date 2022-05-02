@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40dp"
+        android:text="@string/action_weather" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etCity"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/hintCity_weather"
+            android:inputType="textPersonName" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGet"
+            android:layout_marginBottom="10dp"
+            android:onClick="getWeatherDetails"
+            android:text="@string/weather_button"
+            app:backgroundTint="@null" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvResult" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

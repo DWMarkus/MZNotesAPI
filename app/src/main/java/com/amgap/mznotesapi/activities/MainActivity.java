@@ -1,9 +1,14 @@
 package com.amgap.mznotesapi.activities;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -12,8 +17,19 @@ import com.amgap.mznotesapi.R;
 import com.amgap.mznotesapi.utils.ActivityHelper;
 import com.amgap.mznotesapi.TaskListFragment;
 import com.amgap.mznotesapi.utils.Preferences;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.DecimalFormat;
 import java.util.Locale;
 
 @SuppressWarnings({"java:S110", "java:S2696"})
@@ -26,6 +42,13 @@ public class MainActivity extends LocalizationActivity {
     public static MainActivity getInstance() {
         return instance;
     }
+
+    // API
+    EditText etCity;
+    TextView tvResult;
+    private final String url = "https://api.openweathermap.org/data/2.5/weather?q=";
+    private final String appid = "63f1bb139d339d9aaf604e8866c7a040";
+    DecimalFormat df = new DecimalFormat("#.##");
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +82,8 @@ public class MainActivity extends LocalizationActivity {
                 ActivityHelper.refresh(instance);
             }
         });
+
+
     }
 
     @Override
@@ -77,5 +102,8 @@ public class MainActivity extends LocalizationActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }
 

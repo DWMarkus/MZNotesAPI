@@ -8,6 +8,7 @@
     <!-- Layout strings -->
     <string name="action_settings">Options</string>
     <string name="action_weather">Météo</string>
+    <string name="hintCity_weather">Entrer le nom de la ville</string>
     <string name="hide_switch">Cacher les tâches terminées</string>
     <string name="task_list_fragment">Liste de tâches</string>
     <string name="deadline_field">Date échéance (JJ/MM/AAAA)</string>
@@ -17,6 +18,7 @@
     <string name="is_finished_checkbox">Terminé ?</string>
     <string name="edit_button">Éditer</string>
     <string name="delete_button">Supprimer</string>
+    <string name="weather_button">Voir</string>
 
     <!-- Lang things -->
     <string name="selected_lang">Langue actuelle : Français</string>

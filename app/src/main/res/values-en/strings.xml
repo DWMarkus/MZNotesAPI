@@ -10,6 +10,7 @@
     <!-- Layout strings -->
     <string name="action_settings">Settings</string>
     <string name="action_weather">Weather</string>
+    <string name="hintCity_weather">Enter city name</string>
     <string name="hide_switch">Hide finished tasks</string>
     <string name="task_list_fragment">Task list</string>
     <string name="deadline_field">Deadline (DD/MM/YYYY)</string>
@@ -19,6 +20,8 @@
     <string name="is_finished_checkbox">Is finished?</string>
     <string name="edit_button">Edit</string>
     <string name="delete_button">Delete</string>
+    <string name="weather_button">See</string>
+
     <!-- Images content description -->
     <string name="fab_content_description">Create a task</string>
     <string name="task_icon_content_description">List icon</string>
