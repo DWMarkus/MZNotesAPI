@@ -35,7 +35,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.weather);
+        setContentView(R.layout.activity_weather);
         etCity = findViewById(R.id.etCity);
         tvResult = findViewById(R.id.tvResult);
 
