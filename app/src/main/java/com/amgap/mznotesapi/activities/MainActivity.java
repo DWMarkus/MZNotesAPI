@@ -1,14 +1,12 @@
 package com.amgap.mznotesapi.activities;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -17,19 +15,9 @@ import com.amgap.mznotesapi.R;
 import com.amgap.mznotesapi.utils.ActivityHelper;
 import com.amgap.mznotesapi.TaskListFragment;
 import com.amgap.mznotesapi.utils.Preferences;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.DecimalFormat;
 import java.util.Locale;
 
 @SuppressWarnings({"java:S110", "java:S2696"})
@@ -76,7 +64,8 @@ public class MainActivity extends LocalizationActivity {
             }
         });
 
-    }
+        }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -86,18 +75,16 @@ public class MainActivity extends LocalizationActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        final int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            ActivityHelper.changeActivity(this, ChangeLangActivity.class);
-        } else {
-            ActivityHelper.changeActivity(this, WeatherActivity.class);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                ActivityHelper.changeActivity(this, ChangeLangActivity.class);
+                return true;
+            case R.id.action_weather:
+                ActivityHelper.changeActivity(this, WeatherActivity.class);
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
-
-
 
 }
 

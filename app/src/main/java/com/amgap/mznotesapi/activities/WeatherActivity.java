@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.amgap.mznotesapi.R;
 
+import com.amgap.mznotesapi.utils.ActivityHelper;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -25,7 +26,7 @@ import org.json.JSONObject;
 import java.text.DecimalFormat;
 
 public class WeatherActivity extends AppCompatActivity {
-    EditText etCity, etCountry;
+    EditText etCity;
     TextView tvResult;
     private final String url = "https://api.openweathermap.org/data/2.5/weather";
     private final String appid = "63f1bb139d339d9aaf604e8866c7a040";
@@ -37,6 +38,10 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.weather);
         etCity = findViewById(R.id.etCity);
         tvResult = findViewById(R.id.tvResult);
+
+        ActivityHelper.addBackButton(getSupportActionBar());
+
+        final AppCompatActivity activity = this;
     }
 
     public void getWeatherDetails(View view) {
@@ -93,4 +98,4 @@ public class WeatherActivity extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
         }
-    }
+}
