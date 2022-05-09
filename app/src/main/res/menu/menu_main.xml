@@ -17,11 +17,4 @@
         android:title="WeatherAPI"
         app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/action_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="Test"
-        app:showAsAction="never"/>
-
 </menu>
