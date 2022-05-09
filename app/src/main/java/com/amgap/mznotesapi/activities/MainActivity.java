@@ -81,6 +81,9 @@ public class MainActivity extends LocalizationActivity {
                 return true;
             case R.id.action_weather:
                 ActivityHelper.changeActivity(this, WeatherActivity.class);
+                return true;
+            case R.id.action_test:
+                ActivityHelper.changeActivity(this, TestActitivtyTest.class);
             default:
                 return super.onOptionsItemSelected(item);
         }
