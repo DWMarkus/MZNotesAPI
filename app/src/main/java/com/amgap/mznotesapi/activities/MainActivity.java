@@ -1,11 +1,8 @@
 package com.amgap.mznotesapi.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Switch;
 
 import androidx.appcompat.widget.Toolbar;
@@ -81,6 +78,7 @@ public class MainActivity extends LocalizationActivity {
                 return true;
             case R.id.action_weather:
                 ActivityHelper.changeActivity(this, WeatherActivity.class);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
