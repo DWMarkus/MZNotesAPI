@@ -11,9 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.TestActitivtyTest"
-            android:parentActivityName=".activities.MainActivity" />
-        <activity
             android:name=".activities.ChangeLangActivity"
             android:parentActivityName=".activities.MainActivity" />
         <activity
